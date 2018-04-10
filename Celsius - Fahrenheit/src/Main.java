@@ -8,7 +8,7 @@ public class Main {
         double degrees = 0;
         double degreesConverted = 0;
 
-        String stop;
+        String stop = "y";
         String choice;
 
         System.out.println("Celsius - Fahrenheit Converter");
@@ -28,6 +28,7 @@ public class Main {
                 System.out.println("Input the Fahrenheit data number : ");
                 degrees = sc.nextInt();
 
+                degreesConverted = degrees;
                 degreesConverted -= 32;
                 degreesConverted /= 1.8;
 
@@ -35,10 +36,11 @@ public class Main {
 
             } else if (choice.equals("c") || choice.equals("C")) {
 
-                //Celsius to Farhenheit
+                //Celsius to Fahrenheit
                 System.out.println("Input the Celsius data number : ");
                 degrees = sc.nextInt();
 
+                degreesConverted = degrees;
                 degreesConverted = degrees * 1.8;
                 degreesConverted += 32;
 
@@ -52,7 +54,7 @@ public class Main {
             System.out.println();
             System.out.println("Do you want to try again ? y/n");
 
-            stop = sc.nextLine(); // this doesn't work, don't know why
+            stop = sc.next(); // this doesn't work, don't know why
 
             if (stop.equals("y") || stop.equals("Y")) { ok = true; } else { ok = false; }
 
